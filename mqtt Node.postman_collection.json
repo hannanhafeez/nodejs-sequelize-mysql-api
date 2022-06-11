@@ -1,0 +1,531 @@
+{
+	"info": {
+		"_postman_id": "39d7d6c2-7e2c-42a9-87e2-5821abf5e12a",
+		"name": "mqtt Node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "people",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVlODhiZjgxLWEwYjQtNDAzOS04NWNkLTA2MTVhYWYwMDU2OCIsImlhdCI6MTY1MzI5OTA1NCwiZXhwIjoxNjUzMzg1NDU0fQ.X-QndvkirCoNJhp8dgF3WWB2jUHCrc13GgiTSvhAezo",
+								"key": "x-access-token"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"User\",\r\n    \"lastname\":\"Last User\",\r\n    \"email\":\"adarvaish01@gmail.com\",\r\n    \"company\":\"\",\r\n    \"mobileno\":\"03035107586\",\r\n    \"username\":\"Mr.User1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/people"
+					},
+					"response": []
+				},
+				{
+					"name": "readall",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/people"
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/people/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"User\",\r\n    \"lastname\":\"jakajaka\",\r\n    \"email\":\"adarvaish01@gmail.com\",\r\n    \"company\":\"\",\r\n    \"mobileno\":\"03035107586\",\r\n    \"username\":\"Mr.User1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/people/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"User\",\r\n    \"lastname\":\"Last User\",\r\n    \"email\":\"adarvaish01@gmail.com\",\r\n    \"company\":\"\",\r\n    \"mobileno\":\"03035107586\",\r\n    \"username\":\"Mr.User1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/people/1"
+					},
+					"response": []
+				},
+				{
+					"name": "singup for admin/user 1 for user,3 for admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"Mr\",\r\n    \"lastname\":\"Admin\",\r\n    \"email\":\"admin@gmail.com\",\r\n    \"company\":\"\",\r\n    \"phonenumber\":\"03035107586\",\r\n    \"username\":\"Mr.admin\",\r\n    \"roles\":1,\r\n    \"password\":\"1234\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/auth/signup"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "project",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVlODhiZjgxLWEwYjQtNDAzOS04NWNkLTA2MTVhYWYwMDU2OCIsImlhdCI6MTY1MzI5OTA1NCwiZXhwIjoxNjUzMzg1NDU0fQ.X-QndvkirCoNJhp8dgF3WWB2jUHCrc13GgiTSvhAezo",
+								"key": "x-access-token"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"User\",\r\n    \"lastname\":\"Last User\",\r\n    \"email\":\"adarvaish01@gmail.com\",\r\n    \"company\":\"\",\r\n    \"mobileno\":\"03035107586\",\r\n    \"username\":\"Mr.User1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/people"
+					},
+					"response": []
+				},
+				{
+					"name": "readall",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/project"
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/people/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"User\",\r\n    \"lastname\":\"jakajaka\",\r\n    \"email\":\"adarvaish01@gmail.com\",\r\n    \"company\":\"\",\r\n    \"mobileno\":\"03035107586\",\r\n    \"username\":\"Mr.User1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/people/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"User\",\r\n    \"lastname\":\"Last User\",\r\n    \"email\":\"adarvaish01@gmail.com\",\r\n    \"company\":\"\",\r\n    \"mobileno\":\"03035107586\",\r\n    \"username\":\"Mr.User1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/people/1"
+					},
+					"response": []
+				},
+				{
+					"name": "singup for admin/user 1 for user,3 for admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"Mr\",\r\n    \"lastname\":\"Admin\",\r\n    \"email\":\"admin@gmail.com\",\r\n    \"company\":\"\",\r\n    \"phonenumber\":\"03035107586\",\r\n    \"username\":\"Mr.admin\",\r\n    \"roles\":1,\r\n    \"password\":\"1234\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/auth/signup"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sensor",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVlODhiZjgxLWEwYjQtNDAzOS04NWNkLTA2MTVhYWYwMDU2OCIsImlhdCI6MTY1MzI5OTA1NCwiZXhwIjoxNjUzMzg1NDU0fQ.X-QndvkirCoNJhp8dgF3WWB2jUHCrc13GgiTSvhAezo",
+								"key": "x-access-token"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"project_id\":1,\r\n    \"sensor_name\":\"Test Sensor\",\r\n    \"upperthreashold\":\"50\",\r\n    \"lowerthreashhold\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/sensor"
+					},
+					"response": []
+				},
+				{
+					"name": "readall",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/project"
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/sensor/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"project_id\":1,\r\n    \"sensor_name\":\"Test Sensor\",\r\n    \"upperthreashold\":\"500\",\r\n    \"lowerthreashhold\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/sensor/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"User\",\r\n    \"lastname\":\"Last User\",\r\n    \"email\":\"adarvaish01@gmail.com\",\r\n    \"company\":\"\",\r\n    \"mobileno\":\"03035107586\",\r\n    \"username\":\"Mr.User1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/people/1"
+					},
+					"response": []
+				},
+				{
+					"name": "singup for admin/user 1 for user,3 for admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"Mr\",\r\n    \"lastname\":\"Admin\",\r\n    \"email\":\"admin@gmail.com\",\r\n    \"company\":\"\",\r\n    \"phonenumber\":\"03035107586\",\r\n    \"username\":\"Mr.admin\",\r\n    \"roles\":1,\r\n    \"password\":\"1234\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/auth/signup"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sensor Data",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVlODhiZjgxLWEwYjQtNDAzOS04NWNkLTA2MTVhYWYwMDU2OCIsImlhdCI6MTY1MzI5OTA1NCwiZXhwIjoxNjUzMzg1NDU0fQ.X-QndvkirCoNJhp8dgF3WWB2jUHCrc13GgiTSvhAezo",
+								"key": "x-access-token"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sensor_id\":1,\r\n    \"sensorvalue\":\"45\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/sensordata"
+					},
+					"response": []
+				},
+				{
+					"name": "readall",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/sensordata"
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/sensor/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sensor_id\":1,\r\n    \"sensorvalue\":\"46\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/sensordata/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"User\",\r\n    \"lastname\":\"Last User\",\r\n    \"email\":\"adarvaish01@gmail.com\",\r\n    \"company\":\"\",\r\n    \"mobileno\":\"03035107586\",\r\n    \"username\":\"Mr.User1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/people/1"
+					},
+					"response": []
+				},
+				{
+					"name": "singup for admin/user 1 for user,3 for admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"Mr\",\r\n    \"lastname\":\"Admin\",\r\n    \"email\":\"admin@gmail.com\",\r\n    \"company\":\"\",\r\n    \"phonenumber\":\"03035107586\",\r\n    \"username\":\"Mr.admin\",\r\n    \"roles\":1,\r\n    \"password\":\"1234\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/auth/signup"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/auth/signin"
+			},
+			"response": []
+		}
+	]
+}
