@@ -4,10 +4,10 @@ module.exports = {
 
     /** DATABASE */
     db: {
-        DB_HOST: 'localhost',
-        DB_USER: 'root',
-        DB_PASS: 'password',
-        DB_NAME: 'user_db',
+        DB_HOST: 'db-mysql-mqtt-do-user-10749675-0.b.db.ondigitalocean.com',
+        DB_USER: 'doadmin',
+        DB_PASS: 'AVNS_0hx54_Ymeee5eb4Nu4M',
+        DB_NAME: 'mqtt',
         dialect: "mysql",
 
         // pool is optional, it will be used for Sequelize connection pool configuration
