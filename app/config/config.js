@@ -8,6 +8,7 @@ module.exports = {
         DB_USER: 'doadmin',
         DB_PASS: 'AVNS_0hx54_Ymeee5eb4Nu4M',
         DB_NAME: 'mqtt',
+        DB_PORT: '25060',
         dialect: "mysql",
 
         // pool is optional, it will be used for Sequelize connection pool configuration
