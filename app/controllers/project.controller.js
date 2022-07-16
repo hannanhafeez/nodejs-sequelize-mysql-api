@@ -6,7 +6,7 @@ const Op = db.Op;
 exports.create = (req, res) => {
 
     const alertuser1 = req.body.alert_user.toString()
-    console.log(alertuser1);
+
     // Validate request
     if (!req.body.project_name) {
         res.status(400).send({
@@ -16,30 +16,30 @@ exports.create = (req, res) => {
         });
         return;
     }
-    if (!req.body.address) {
-        res.status(400).send({
-            error: 1,
-            success: 0,
-            message: "address can not be empty!"
-        });
-        return;
-    }
-    if (!req.body.lat) {
-        res.status(400).send({
-            error: 1,
-            success: 0,
-            message: "lat can not be empty!"
-        });
-        return;
-    }
-    if (!req.body.lng) {
-        res.status(400).send({
-            error: 1,
-            success: 0,
-            message: "lng can not be empty!"
-        });
-        return;
-    }
+    // if (!req.body.address) {
+    //     res.status(400).send({
+    //         error: 1,
+    //         success: 0,
+    //         message: "address can not be empty!"
+    //     });
+    //     return;
+    // }
+    // if (!req.body.lat) {
+    //     res.status(400).send({
+    //         error: 1,
+    //         success: 0,
+    //         message: "lat can not be empty!"
+    //     });
+    //     return;
+    // }
+    // if (!req.body.lng) {
+    //     res.status(400).send({
+    //         error: 1,
+    //         success: 0,
+    //         message: "lng can not be empty!"
+    //     });
+    //     return;
+    // }
 
 
 
@@ -52,7 +52,7 @@ exports.create = (req, res) => {
         alert_user: alertuser1
 
     };
-    console.log(project);
+    console.log(project.address);
 
     // Save Book in database
     Project.create(project)

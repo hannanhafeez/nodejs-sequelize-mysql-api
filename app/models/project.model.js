@@ -15,16 +15,16 @@ module.exports = (sequelize, Sequelize, DataTypes) => {
             },
             address: {
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: true,
             },
             lat: {
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: true,
 
             },
             lng: {
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: true,
             },
             alert_user: {
                 type: DataTypes.STRING,

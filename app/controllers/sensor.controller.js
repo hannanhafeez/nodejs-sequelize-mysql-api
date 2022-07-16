@@ -1,3 +1,4 @@
+
 const db = require("../models");
 const Sensor = db.sensor;
 const Op = db.Op;
@@ -44,6 +45,10 @@ exports.create = (req, res) => {
     const sensor = {
         project_id: req.body.project_id,
         sensor_name: req.body.sensor_name,
+        address: req.body.address,
+        lat: req.body.lat,
+        lng: req.body.lng,
+        sensor_type: req.body.sensor_type,
         upperthreashold: req.body.upperthreashold,
         lowerthreashhold: req.body.lowerthreashhold,
 
@@ -51,13 +56,38 @@ exports.create = (req, res) => {
     console.log(sensor);
 
     // Save Book in database
+    var topic = '';
     Sensor.create(sensor)
         .then(data => {
-            res.send({
-                error: 0,
-                success: 1,
-                message: "data has been added successfully!"
-            });
+            // console.log(data)
+            const date = new Date();
+            topic = data.dataValues.sensor_id.toString() +  date.getMilliseconds().toString()
+            console.log({
+                sensorID: data.dataValues.sensor_id,
+                milis: date.getMilliseconds().toString(),
+                topic
+            })
+            return Sensor.update({
+                topic: topic
+            }, {
+                where: { sensor_id: data.dataValues.sensor_id }
+            })
+        })
+        .then(num=>{
+            if(num==1){
+                res.send({
+                    error: 0,
+                    success: 1,
+                    payload: {topic},
+                    message: "data has been added successfully!"
+                });
+            }else{
+                res.status(500).send({
+                    error: 1,
+                    success: 0,
+                    message: err.message || "Data was not saved successfully!"
+                });    
+            }
         })
         .catch(err => {
             res.status(500).send({
@@ -78,7 +108,7 @@ exports.findAll = (req, res) => {
         }
     } : null;
 
-    Sensor.findAll({ where: condition })
+    Sensor.findAll({ where: condition  })
         .then(data => {
             l = {
                 error: 0,
@@ -103,6 +133,34 @@ exports.findOne = (req, res) => {
 
     Sensor.findByPk(sensor_id)
         .then(data => {
+            l = {
+                error: 0,
+                success: 1,
+                data: data
+            }
+
+            res.send(l);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: `Error retrieving Book with id = ${id}`
+            });
+        });
+};
+
+// Find a all Book with an project_id
+exports.findByProject = (req, res) => {
+    const id = req.params.project_id
+    console.log(id);
+  
+    var condition = id ? {
+         project_id: {
+            [Op.eq]: id
+        }
+    } : null;
+    
+    Sensor.findAll({ where: condition })
+    .then(data => {
             l = {
                 error: 0,
                 success: 1,

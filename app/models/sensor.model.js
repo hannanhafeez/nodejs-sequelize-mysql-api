@@ -13,9 +13,23 @@ module.exports = (sequelize, Sequelize, DataTypes) => {
                 type: DataTypes.INTEGER,
                 allowNull: false,
             },
+        
             sensor_name: {
                 type: DataTypes.STRING,
                 allowNull: false,
+            },
+            address: {
+                type: DataTypes.STRING,
+                allowNull: true,
+            },
+            lat: {
+                type: DataTypes.STRING,
+                allowNull: true,
+
+            },
+            lng: {
+                type: DataTypes.STRING,
+                allowNull: true,
             },
             upperthreashold: {
                 type: DataTypes.STRING,
@@ -24,6 +38,14 @@ module.exports = (sequelize, Sequelize, DataTypes) => {
             lowerthreashhold: {
                 type: DataTypes.STRING,
                 allowNull: false,
+            },
+            sensor_type: {
+                type: DataTypes.STRING,
+                allowNull: true,
+            },
+            topic: {
+                type: DataTypes.STRING,
+                allowNull: true,
 
             },
             created_at: {

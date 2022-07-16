@@ -15,6 +15,9 @@ module.exports = app => {
     // Retrieve a single people with id
     router.get("/:id", sensorController.findOne);
 
+    // Retrieve a single people with id
+    router.get("/pro/:project_id", sensorController.findByProject);
+
     // Update a people with id
     router.put("/:id", sensorController.update);
 
