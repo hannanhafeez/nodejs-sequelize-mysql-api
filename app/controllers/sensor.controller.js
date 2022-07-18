@@ -178,17 +178,22 @@ exports.findByProject = (req, res) => {
 
 // Update a Book by the id in the request
 exports.update = (req, res) => {
-    const id = req.params.id;
+    const sensor_id = req.params.id;
 
     const sensor = {
         project_id: req.body.project_id,
         sensor_name: req.body.sensor_name,
         upperthreashold: req.body.upperthreashold,
         lowerthreashhold: req.body.lowerthreashhold,
+        lat: req.body.lat,
+        lng:req.body.lng,
+        sensor_type:req.body.sensor_type
 
     };
+    console.log(sensor)
+    console.log(sensor_id)
     Sensor.update(sensor, {
-            where: { sensor_id: id }
+            where: { sensor_id: sensor_id }
         })
         .then(num => {
             if (num == 1) {
